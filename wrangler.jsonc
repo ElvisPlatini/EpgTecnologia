@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "epg-tecnologia",
+  "name": "epg-tecnologia-page",
   "main": "worker/src/index.ts",
   "compatibility_date": "2026-06-05",
   "assets": {
