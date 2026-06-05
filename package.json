@@ -4,10 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
     "site:dev": "wrangler pages dev --config site/wrangler.jsonc",
     "site:deploy": "wrangler pages deploy --config site/wrangler.jsonc",
-    "worker:dev": "wrangler dev --config worker/wrangler.jsonc",
-    "worker:deploy": "wrangler deploy --config worker/wrangler.jsonc",
+    "worker:dev": "wrangler dev",
+    "worker:deploy": "wrangler deploy",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

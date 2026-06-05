@@ -7,22 +7,26 @@ Estrutura minima para publicar um site no Cloudflare Pages e um Worker no Cloudf
 - `site/public`: arquivos estaticos do site.
 - `site/functions`: Pages Functions opcionais para rotas dinamicas do site.
 - `worker/src`: codigo do Worker independente.
-- `worker/wrangler.jsonc`: configuracao do Worker.
+- `wrangler.jsonc`: configuracao principal para deploy via `npx wrangler deploy`.
+- `worker/wrangler.jsonc`: configuracao alternativa para deploy isolado do Worker.
 
 ## Comandos
 
 ```bash
 npm install
-npm run site:dev
-npm run worker:dev
+npm run dev
 ```
 
 ## Deploy
 
 ```bash
-npm run site:deploy
-npm run worker:deploy
+npm run deploy
 ```
 
-Antes do deploy, ajuste os nomes dos projetos em `package.json` e `worker/wrangler.jsonc` conforme a conta Cloudflare.
+No Cloudflare Workers Builds, use o comando de deploy:
 
+```bash
+npx wrangler deploy
+```
+
+Antes do deploy, ajuste os nomes dos projetos em `wrangler.jsonc`, `package.json` e `worker/wrangler.jsonc` conforme a conta Cloudflare.

@@ -6,7 +6,7 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
-    if (url.pathname === "/health") {
+    if (url.pathname === "/health" || url.pathname === "/api/health") {
       return Response.json({
         ok: true,
         service: "cloudflare-worker",
@@ -21,4 +21,3 @@ export default {
     });
   }
 };
-
